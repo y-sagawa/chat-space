@@ -17,24 +17,24 @@
       .main-content
         .main-header
           .main-header-top
+            %button.edit{:type => "submit"} Edit
             .main-header-groupname sampleグループ
             .main-header-edit
-              %button.edit{:type => "submit"} Edit
             .main-header-bottm
               .main-header-membersname sagawa
         .main-middle-content
           %ul.lists
-            %li.list sagawa
+            %li.list.list__name sagawa
             %li.list.list__time 2018/03/08 10:30:40
             %li.list.list__message テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
         .main-middle-content
           %ul.lists
-            %li.list AAA
+            %li.list.list__name AAA
             %li.list.list__time 2018/03/09 15:22:10
             %li.list.list__message コメント
         .main-middle-content
           %ul.lists
-            %li.list BBB
+            %li.list.list__name BBB
             %li.list.list__time 2018/03/10 23:00:33
             %li.list.list__message 返信
         .main-bottom
