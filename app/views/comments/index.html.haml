@@ -1,0 +1,45 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "UTF-8"}/
+    %link{:href => "comments.css.scss", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "https://use.fontawesome.com/releases/v5.0.6/css/all.css", :rel => "stylesheet"}/
+    %title html_css_question1
+  %body
+    .popup チャットグループが作成されました
+    .content
+      .side-menu
+        %button.icon-edit{:type => "submit"}
+          %i.fas.fa-edit.fa-lg{"aria-hidden" => "true"}
+        %button.icon-cog{:type => "submit"}
+          %i.fas.fa-cog.fa-lg{"aria-hidden" => "true"}
+        .side-user sagawa
+        .side-groupname AAA
+        .side-groupmessages あああ
+        .side-groupname BBB
+        .side-groupmessages いいい
+      .main-content
+        .main-header
+          .main-header-top
+            %button.edit{:type => "submit"} Edit
+            .main-header-groupname sampleグループ
+            .main-header-edit
+            .main-header-bottm
+              .main-header-membersname sagawa
+        .main-middle-content
+          .list__name sagawa
+          .list__time 2018/03/08 10:30:40
+          .list__message テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+          .list.list__name AAA
+          .list.list__time 2018/03/09 15:22:10
+          .list.list__message コメント
+          .list.list__name BBB
+          .list.list__time 2018/03/10 23:00:33
+          .list.list__message 返信
+        .main-bottom
+          .main-bottom-left
+            %input.message{:placeholder => "type a message", :type => "text", "type:" => ""}/
+            %i.far.fa-image.fa-lg
+          .main-bottom-right
+            %button.send{:type => "submit"} Send

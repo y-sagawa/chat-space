@@ -16,3 +16,10 @@ module ChatSpace
     # -- all .rb files in that directory are automatically loaded.
   end
 end
+
+# config.generatators do |g|
+#   g.helper false
+#   g.template_engine false
+#   g.test_framework :rspec, view_specs: false, helper_specs: false, fixture: true
+#   g.fixtrue_replacement :factory_girl, dir: "spec/support/factories"
+# end
