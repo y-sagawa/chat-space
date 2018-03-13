@@ -28,15 +28,18 @@
             .main-header-bottm
               .main-header-membersname sagawa
         .main-middle-content
-          .list__name sagawa
-          .list__time 2018/03/08 10:30:40
-          .list__message テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
-          .list.list__name AAA
-          .list.list__time 2018/03/09 15:22:10
-          .list.list__message コメント
-          .list.list__name BBB
-          .list.list__time 2018/03/10 23:00:33
-          .list.list__message 返信
+          %ul.list
+            %li.list__name sagawa
+            %li.list__time 2018/03/08 10:30:40
+            %li.list__message テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+          %ul.list
+            %li.list__name AAA
+            %li.list__time 2018/03/09 15:22:10
+            %li.list__message コメント
+          %ul.list
+            %li.list__name BBB
+            %li.list__time 2018/03/10 23:00:33
+            %li.list__message 返信
         .main-bottom
           .main-bottom-left
             %input.message{:placeholder => "type a message", :type => "text", "type:" => ""}/

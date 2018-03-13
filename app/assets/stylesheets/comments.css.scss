@@ -98,6 +98,7 @@ html, body {
     }
     .edit{
       border: solid 1px $blue_color;
+      color: $blue_color;
       position: absolute;
       top :28px;
       right: 40px;
@@ -111,25 +112,26 @@ html, body {
     /*display: inline;*/
       /*background-color: snow;*/
     }
-    .list__name{
-      line-height: 16px;
-      float: left;
-      padding-right: 10px;
-    }
-    .list__time{
-      font-size: 12px;
-      color: #999;
-      /*padding-left: 10px;*/
-    }
-    .list__message{
-      clear: both;
+    .list{
       list-style: none;
       padding-bottom: 40px;
-      font-size: 14px;
-      color: #434A54;
-      // padding-top: 10px;*/
+      &__name{
+        line-height: 16px;
+        float: left;
+        padding-right: 10px;
+      }
+      &__time{
+        font-size: 12px;
+        color: #999;
+        }
+      &__message{
+          clear: both;
+          font-size: 14px;
+          color: #434A54;
+          // padding-top: 10px;*/
       // padding-right: 40px;
       // display: block;*/
+      }
     }
     .main-bottom{
       position: fixed;
