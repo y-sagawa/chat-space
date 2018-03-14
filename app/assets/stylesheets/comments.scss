@@ -5,66 +5,63 @@ html, body {
 }
 
 .popup{
-  background-color: $blue_color;
+  background-color: $Blue_color;
   height: 30px;
   width: 100%;
   position: fixed;
-  color: $white_color;
+  color: $White_color;
   text-align: center;
   line-height: 30px;
   z-index: 1;
 }
 
 .content{
-  background-color: whitesmoke;
-  height: 100%;
   padding-top: 30px;
   z-index: 2;
-  .side-menu{
-    background-color: $darkblue_color;
-    height: 100%;
-    width: 300px;
-    position: relative;
-    .icon-edit{
-      background-color: $darkblue_color;
-      color: $white_color;
-      position: absolute;
-      display: inline;
-      right: 45px;
-      top: 38px;
-      border: solid 1px $darkblue_color;
-      i{margin: -0.5em -1.5em
-      }
-    }
-    .icon-cog{
-       background-color: $darkblue_color;
-       color: $white_color;
-       position: absolute;
-       display: inline;
-       right: 20px;
-       top: 38px;
-       border: solid 1px $darkblue_color;
-       i{margin: -0.5em -1.5em
-      }
-    }
-    .side-user{
+
+  .side{
+    .side-header{
+      background-color: $Deepblue_color;
       height: 96px;
-      color: $white_color;
-      background-color: #253141;
-      font-size: 16px;
-      font-weight: bold;
+      width: 260px;
+      position: relative;
+      color: $White_color;
       padding: 0 20px;
       line-height: 96px;
+      &__user{
+        color: $White_color;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .icon-edit{
+        background-color: $Deepblue_color;
+        color: $White_color;
+        position: absolute;
+        right: 45px;
+        top: 0;
+      }
+      .icon-cog{
+         background-color: $Deepblue_color;
+         color: $White_color;
+         position: absolute;
+         right: 20px;
+         top: 0;
+      }
     }
-    .side-groupname{
-      color: $white_color;
-      padding: 20px 20px 0 20px;
-      font-size: 15px;
-    }
-    .side-groupmessages{
-      color: $white_color;
-      font-size: 11px;
-      padding: 5px 20px 40px 20px;
+    .side-content{
+      background-color: $Darkblue_color;
+      width: 260px;
+      height: calc(100vh - 96px);
+      padding: 20px;
+        &__groupname{
+        color: $White_color;
+        font-size: 15px;
+        }
+        &__groupmessages{
+          color: $White_color;
+          font-size: 11px;
+          padding-bottom: 40px;
+        }
     }
   }
 
@@ -73,38 +70,35 @@ html, body {
     position: absolute;
     right: 0;
     top: 30px;
+    background-color: $Whitesomoke_color;
     .main-header{
-      background-color: $white_color;
+      background-color: $White_color;
+      width: 100%;
       height: 96px;
-      border-bottom: solid 2px #eee;
+      padding: 0 40px;
+      border-bottom: solid 2px $Whitesomoke_color;
       &__groupname{
         font-size: 20px;
         color: #333;
-        margin: 0 40px;
         padding-top: 35px;
       }
-        &__membersname{
-         font-size: 12px;
-         color: #AAA;
-         padding: 0 40px;
-        }
+      &__membersname{
+        font-size: 12px;
+        color: #AAA;
+      }
     }
-
     .edit{
-    border: solid 1px $blue_color;
-    color: $blue_color;
-    position: absolute;
-    top :28px;
-    right: 40px;
-    padding: 0 20px;
-    line-height: 40px;
-    height: 40px;
+      border: solid 1px $Blue_color;
+      color: $Blue_color;
+      position: absolute;
+      top :28px;
+      right: 40px;
+      padding: 0 20px;
+      line-height: 40px;
     }
     .main-middle-content{
-      margin: 46px 40px 40px 40px;
-      display: block;
-    /*display: inline;*/
-      /*background-color: snow;*/
+      padding: 46px 40px 40px 40px;
+      height: calc(100vh - 96px - 90px)
     }
     .list{
       list-style: none;
@@ -117,33 +111,26 @@ html, body {
       &__time{
         font-size: 12px;
         color: #999;
-        }
+      }
       &__message{
-          clear: both;
-          font-size: 14px;
-          color: #434A54;
-          // padding-top: 10px;*/
-      // padding-right: 40px;
-      // display: block;*/
+        clear: both;
+        font-size: 14px;
+        color: #434A54;
       }
     }
     .main-bottom{
       position: fixed;
       bottom: 0;
-      background-color: #AAA;
+      background-color: $Gray_color;
       height: 90px;
       width: calc(100vw - 300px);
     }
-    // .main-bottm-left{
-    // }
-    // .main-bottom-right{
-    // }
     .message{
-     height: 46px;
-     font-size: 16px;
-     padding: 0 10px;
-     margin: 20px 0 20px 40px;
-     width: calc(100% - 230px);
+      height: 46px;
+      font-size: 16px;
+      padding: 0 10px;
+      margin: 20px 0 20px 40px;
+      width: calc(100% - 230px);
     }
     .fa-image{
       position: absolute;
@@ -151,16 +138,16 @@ html, body {
       top: 40px;
     }
     .send{
-     height: 50px;
-     width: 100px;
-     color: $white_color;
-     font-size: 18px;
-     background-color: $blue_color;
-     text-align: center;
-     position: absolute;
-     top: 20px;
-     right: 40px;
-     border: solid 1px $blue_color;
+      height: 50px;
+      width: 100px;
+      color: $White_color;
+      font-size: 18px;
+      background-color: $Blue_color;
+      text-align: center;
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      border: solid 1px $Blue_color;
     }
   }
 }
