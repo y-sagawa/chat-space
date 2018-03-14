@@ -1,16 +1,18 @@
 
 .popup チャットグループが作成されました
 .content
-  .side-menu
-    %link_to.icon-edit
-      %i.fas.fa-edit
-    %link_to.icon-cog
-      %i.fas.fa-cog
-    .side-user sagawa
-    .side-groupname AAA
-    .side-groupmessages ああああああああああああああああああああああああああああ
-    .side-groupname BBB
-    .side-groupmessages いいい
+  .side
+    .side-header
+      .side__user sagawa
+      %link_to.icon-edit
+        %i.fas.fa-edit
+      %link_to.icon-cog
+        %i.fas.fa-cog
+    .side-content
+      .side-content__groupname AAA
+      .side-content__groupmessages ああああああああああああああああああああああああああああ
+      .side-content__groupname BBB
+      .side-content__groupmessages いいい
   .main-content
     .main-header
       .main-header__groupname sampleグループ
