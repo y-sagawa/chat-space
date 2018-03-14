@@ -1,0 +1,40 @@
+
+.popup チャットグループが作成されました
+.content
+  .side
+    .side-header
+      .side__user sagawa
+      %link_to.icon-edit
+        %i.fas.fa-edit
+      %link_to.icon-cog
+        %i.fas.fa-cog
+    .side-content
+      .side-content__groupname AAA
+      .side-content__groupmessages ああああああああああああああああああああああああああああ
+      .side-content__groupname BBB
+      .side-content__groupmessages いいい
+  .main-content
+    .main-header
+      .main-header__groupname sampleグループ
+      .main-header__membersname sagawa
+      .main-header__edit
+      .edit Edit
+    .main-middle-content
+      %ul.list
+        %li.list__name sagawa
+        %li.list__time 2018/03/08 10:30:40
+        %li.list__message テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+      %ul.list
+        %li.list__name AAA
+        %li.list__time 2018/03/09 15:22:10
+        %li.list__message コメント
+      %ul.list
+        %li.list__name BBB
+        %li.list__time 2018/03/10 23:00:33
+        %li.list__message 返信
+    .main-bottom
+      .main-bottom-left
+        %input.message{:placeholder => "type a message", :type => "text", "type:" => ""}/
+        %i.far.fa-image.fa-lg
+      .main-bottom-right
+        %button.send{:type => "submit"} Send
