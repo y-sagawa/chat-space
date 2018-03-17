@@ -1,21 +1,9 @@
-
-.popup チャットグループが作成されました
 .content
-  .side
-    .side-header
-      .side__user sagawa
-      %link_to.icon-edit
-        %i.fas.fa-edit
-      %link_to.icon-cog
-        %i.fas.fa-cog
-    .side-content
-      .side-content__groupname AAA
-      .side-content__groupmessages ああああああああああああああああああああああああああああ
-      .side-content__groupname BBB
-      .side-content__groupmessages いいい
+  = render 'devise/shared/side_bar'
   .main-content
     .main-header
-      .main-header__groupname sampleグループ
+      .main-header__groupname
+        = current_user.name
       .main-header__membersname sagawa
       .main-header__edit
       .edit Edit
