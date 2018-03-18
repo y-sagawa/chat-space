@@ -4,21 +4,7 @@ html, body {
   padding: 0;
 }
 
-.popup{
-  background-color: $Blue_color;
-  height: 30px;
-  width: 100%;
-  position: fixed;
-  color: $White_color;
-  text-align: center;
-  line-height: 30px;
-  z-index: 1;
-}
-
 .content{
-  padding-top: 30px;
-  z-index: 2;
-
   .side{
     .side-header{
       background-color: $Deepblue_color;
@@ -27,25 +13,29 @@ html, body {
       position: relative;
       color: $White_color;
       padding: 0 20px;
-      line-height: 96px;
+      line-height: 100px;
       &__user{
         color: $White_color;
         font-size: 16px;
         font-weight: bold;
       }
-      .icon-edit{
+      .icon-new-groups{
         background-color: $Deepblue_color;
-        color: $White_color;
         position: absolute;
         right: 45px;
         top: 0;
+        i {
+          color: $White_color;
+        }
       }
-      .icon-cog{
+      .icon-edit{
          background-color: $Deepblue_color;
-         color: $White_color;
          position: absolute;
          right: 20px;
          top: 0;
+         i {
+          color: $White_color;
+         }
       }
     }
     .side-content{
@@ -69,12 +59,13 @@ html, body {
     width: calc(100% - 300px);
     position: absolute;
     right: 0;
-    top: 30px;
+    top :0;
+
     background-color: $Whitesomoke_color;
     .main-header{
       background-color: $White_color;
       width: 100%;
-      height: 96px;
+      height: 100px;
       padding: 0 40px;
       border-bottom: solid 2px $Whitesomoke_color;
       &__groupname{
@@ -98,7 +89,7 @@ html, body {
     }
     .main-middle-content{
       padding: 46px 40px 40px 40px;
-      height: calc(100vh - 96px - 90px)
+      height: calc(100vh - 100px - 90px)
     }
     .list{
       list-style: none;

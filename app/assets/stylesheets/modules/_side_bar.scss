@@ -1,0 +1,49 @@
+.side{
+  .side-header{
+    background-color: $Deepblue_color;
+    height: 96px;
+    width: 260px;
+    position: relative;
+    color: $White_color;
+    padding: 0 20px;
+    line-height: 100px;
+    &__user{
+      color: $White_color;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .icon-new-groups{
+      background-color: $Deepblue_color;
+      position: absolute;
+      right: 45px;
+      top: 0;
+      i {
+        color: $White_color;
+      }
+    }
+    .icon-edit{
+       background-color: $Deepblue_color;
+       position: absolute;
+       right: 20px;
+       top: 0;
+       i {
+        color: $White_color;
+       }
+    }
+  }
+  .side-content{
+    background-color: $Darkblue_color;
+    width: 260px;
+    height: calc(100vh - 96px);
+    padding: 20px;
+      &__groupname{
+      color: $White_color;
+      font-size: 15px;
+      }
+      &__groupmessages{
+        color: $White_color;
+        font-size: 11px;
+        padding-bottom: 40px;
+      }
+  }
+}

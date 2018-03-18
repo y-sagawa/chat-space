@@ -73,3 +73,7 @@ end
 
 gem 'haml-rails'
 gem 'erb2haml'
+
+group :development do
+  gem 'devise'
+end
