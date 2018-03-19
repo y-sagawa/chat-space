@@ -109,36 +109,36 @@ html, body {
         color: #434A54;
       }
     }
-    .main-bottom{
+    .form{
       position: fixed;
       bottom: 0;
       background-color: $Gray_color;
       height: 90px;
       width: calc(100vw - 300px);
-    }
-    .message{
-      height: 46px;
-      font-size: 16px;
-      padding: 0 10px;
-      margin: 20px 0 20px 40px;
-      width: calc(100% - 230px);
+      &__message{
+        height: 46px;
+        font-size: 16px;
+        padding: 0 10px;
+        margin: 20px 0 20px 40px;
+        width: calc(100% - 230px);
+      }
+      &__submit{
+        height: 50px;
+        width: 100px;
+        color: $White_color;
+        font-size: 18px;
+        background-color: $Blue_color;
+        text-align: center;
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        border: solid 1px $Blue_color;
+      }
     }
     .fa-image{
       position: absolute;
       right: 175px;
       top: 40px;
-    }
-    .send{
-      height: 50px;
-      width: 100px;
-      color: $White_color;
-      font-size: 18px;
-      background-color: $Blue_color;
-      text-align: center;
-      position: absolute;
-      top: 20px;
-      right: 40px;
-      border: solid 1px $Blue_color;
     }
   }
 }
