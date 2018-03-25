@@ -7,7 +7,8 @@
       .main-header__membersname
         = current_user.name
       .main-header__edit
-      .edit Edit
+      = link_to edit_group_path(@group) do
+        .edit Edit
     .main-middle-content
       %ul.list
         = render @messages

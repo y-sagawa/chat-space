@@ -25,6 +25,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+gem 'jquery-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -39,6 +40,12 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'byebug', platform: :mri
+  gem 'pry-rails'
+  gem 'rspec-rails', '~> 3.5'
+  gem 'rails-controller-testing'
+  gem "factory_girl_rails", "~> 4.0"
+  gem 'faker'
 end
 
 group :development do
@@ -53,30 +60,17 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'devise'
-
-group :development do
-  gem 'rspec'
-end
-
-group :test do
-  gem 'rspec'
-end
-
-group :test do
-  gem 'rspec'
-end
-
 group :production do
   gem 'unicorn'
 end
 
-gem 'haml-rails'
-gem 'erb2haml'
-
-group :development do
-  gem 'devise'
+group :test do
+  gem 'rspec'
 end
 
+gem 'haml-rails'
+gem 'erb2haml'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'rspec'
+gem 'devise'

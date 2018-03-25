@@ -39,6 +39,7 @@ html, body {
       }
     }
     .side-content{
+      overflow: auto;
       background-color: $Darkblue_color;
       width: 260px;
       height: calc(100vh - 96px);
@@ -88,6 +89,7 @@ html, body {
       line-height: 40px;
     }
     .main-middle-content{
+      overflow: auto;
       padding: 46px 40px 40px 40px;
       height: calc(100vh - 100px - 90px)
     }
