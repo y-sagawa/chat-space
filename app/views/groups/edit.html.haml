@@ -1,8 +1,7 @@
 .chat-group-form
   %h1 チャットグループ編集
-  %form#edit_chat_group_22.edit_chat_group{"accept-charset" => "UTF-8", action: "/chat_groups/22", method: "post"}
-  %input{name: "utf8", type: "hidden", value: "✓"}/
-  %input{name: "_method", type: "hidden", value: "patch"}/
-  %input{name: "authenticity_token", type: "hidden", value: "U5ABp0/UobRQTSwsR0V40bX1w3t0rZ0CTqrVyLecD+L6sdhBRO/gVcKy7w/Rgxnc7Hf0Ts39996dal3to5fTag=="}/
+  %form#new_chat_group.new_chat_group{"accept-charset" => "UTF-8", action: "/chat_groups", method: "post"}
+    %input{name: "utf8", type: "hidden", value: "✓"}/
+    %input{name: "authenticity_token", type: "hidden", value: "AxFKlYEhD6eqX1PiZoTYQDANtKvgcFSXZQXHt5hyTl55/U/CHC5rtPavrcu2za65riz4tekZEy56vP6kEb2wYA=="}/
 
-  = render partial: 'form', locals: {group: @group }
+  = render 'form', { group: @group }
