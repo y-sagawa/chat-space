@@ -77,6 +77,3 @@ gem 'erb2haml'
 group :development do
   gem 'devise'
 end
-
-gem 'carrierwave'
-gem 'mini_magick'

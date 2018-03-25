@@ -3,19 +3,26 @@
   .main-content
     .main-header
       .main-header__groupname
-        = @group.name
-      .main-header__membersname
         = current_user.name
+      .main-header__membersname sagawa
       .main-header__edit
       .edit Edit
     .main-middle-content
       %ul.list
-        = render @messages
-    .form
-      = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-        .form__mask
-          = f.label :image, class: 'form__mask__image' do
-            %i.far.fa-image.fa-lg
-            = f.file_field :image, class: 'hidden'
-        = f.submit 'Send', class: 'form__submit'
+        %li.list__name sagawa
+        %li.list__time 2018/03/08 10:30:40
+        %li.list__message テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+      %ul.list
+        %li.list__name AAA
+        %li.list__time 2018/03/09 15:22:10
+        %li.list__message コメント
+      %ul.list
+        %li.list__name BBB
+        %li.list__time 2018/03/10 23:00:33
+        %li.list__message 返信
+    .main-bottom
+      .main-bottom-left
+        %input.message{:placeholder => "type a message", :type => "text", "type:" => ""}/
+        %i.far.fa-image.fa-lg
+      .main-bottom-right
+        %button.send{:type => "submit"} Send
