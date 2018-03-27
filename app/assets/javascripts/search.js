@@ -2,10 +2,10 @@ $(document).on('turbolinks:load', function(){
   function appendUser(user){
     var html =`
       <div class = "chat-group-user clearfix">
-      <p class = "chat-group-user__name">
-        ${ user.name }
-      </p>
-      <a class = "user-search-add chat-group-user__btn chat-group-user__btn--add", data-user-id = "${ user.id }" , data-user-name = "${ user.name }">追加</a>
+        <p class = "chat-group-user__name">
+          ${ user.name }
+        </p>
+        <a class = "user-search-add chat-group-user__btn chat-group-user__btn--add", data-user-id = "${ user.id }" , data-user-name = "${ user.name }">追加</a>
       </div>
       `
     $("#user-search-result").append(html);
@@ -36,7 +36,7 @@ $(document).on('turbolinks:load', function(){
     })
   });
 
-  function appendGroupUsers(user_id,user_name){
+  function appendGroupUsers(user_id, user_name){
     var html =`
       <div class='chat-group-user clearfix js-chat-member' id='chat-group-user-${ user_id }'>
         <input name='group[user_ids][]' type='hidden' value= ${ user_id }>
@@ -49,8 +49,8 @@ $(document).on('turbolinks:load', function(){
 
   $("#user-search-result").on("click", ".chat-group-user__btn--add", function(e){
      e.preventDefault();
-     var user_id = $(this).attr('data-user-id');
-     var user_name = $(this).attr('data-user-name');
+     var user_id = $(this).data('user-id');
+     var user_name = $(this).data('user-name');
      $(this).parent().remove();
      appendGroupUsers(user_id, user_name);
   });
