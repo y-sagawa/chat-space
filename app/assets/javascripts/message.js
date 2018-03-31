@@ -15,9 +15,9 @@ $(function(){
     .done(function(last){
       var insertHTML = '';
       last.messages.forEach(function(message){
-            insertHTML += buildHTML(message);
-            $(".main-middle-content").append(insertHTML);
-            $(".main-middle-content").animate({scrollTop:$(".main-middle-content")[0].scrollHeight}, "swing");
+        insertHTML += buildHTML(message);
+        $(".main-middle-content").append(insertHTML);
+        $(".main-middle-content").animate({scrollTop:$(".main-middle-content")[0].scrollHeight}, "swing");
         return false;
       });
     })
@@ -34,31 +34,29 @@ $(function(){
     }
     var html =
     `<ul class = "list" data-message-id= "${message.id}">
-        <li class = "list__name">
-          <p>
-            ${message.user_name}
-          </p>
-        </li>
-        <li class = "list__time">
-          <p>
-            ${message.created_at}
-          </p>
-        </li>
-        <li class = "list__message">
-          <p class = "list__message__content">
-            ${message.content}
-          </p>
-          <img src= "${message.image.url}"/, class = "list__message__image" >
-        </li>
-      </ul>`
+      <li class = "list__name">
+        <p>
+          ${message.user_name}
+        </p>
+      </li>
+      <li class = "list__time">
+        <p>
+          ${message.created_at}
+        </p>
+      </li>
+      <li class = "list__message">
+        <p class = "list__message__content">
+          ${message.content}
+        </p>
+        <img src= "${message.image.url}"/, class = "list__message__image" >
+      </li>
+    </ul>`
     return html;
     console.log(message)
   }
+
 fail = ""
   setInterval(autoupdate, 5000);
-
-
-
   $('#new_message').on('submit', function(e) {
     e.preventDefault();
     var formData = new FormData(this);
