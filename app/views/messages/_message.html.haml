@@ -1,8 +1,8 @@
-%ul.list
+%ul.list{ "data-message-id": "#{message.id}" }
   %li.list__name
     = message.user.name
   %li.list__time
-    %p= l(message.created_at)
+    %p= message.created_at.strftime("%Y/%m/%d %H:%M")
   %li.list__message
     - if message.content.present?
       %p.list__message__content

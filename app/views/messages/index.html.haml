@@ -11,13 +11,12 @@
       = link_to edit_group_path(@group) do
         .edit Edit
     .main-middle-content
-      %ul.list
-        = render @messages
+      = render @messages
     .form
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
         .form__mask
           = f.label :image, class: 'form__mask__image' do
             %i.far.fa-image.fa-lg
-            = f.file_field :image, class: 'hidden'
+            = f.file_field :image, style: 'display:none'
         = f.submit 'Send', class: 'form__submit'
