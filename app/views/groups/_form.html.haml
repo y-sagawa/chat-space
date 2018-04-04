@@ -23,6 +23,11 @@
       = f.label :chat_group_member, 'チャットメンバー', class: 'chat-group-form__label'
     .chat-group-form__field--right
       #chat-group-users
+        -group.users.each do |user|
+          .chat-group-user.clearfix.js-chat-member{id: "chat-group-user=#{user.id}"}
+            %input{name: "group[user_ids][]", type: "hidden",  value: user.id }
+            %p.chat-group-user__name=user.name
+            %a.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn 削除
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
     .chat-group-form__field--right
