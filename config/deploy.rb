@@ -56,4 +56,5 @@ namespace :deploy do
   task :restart do
     invoke 'unicorn:restart'
   end
+set :linked_files, %w{ config/secrets.yml }
 end
