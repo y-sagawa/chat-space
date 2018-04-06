@@ -8,7 +8,7 @@ class MessagesController < ApplicationController
         @group = Group.find(params[:group_id])
         @messages = @group.messages.includes(:user)
       }
-      format.json{ @new_messages = Message.where('id > ?', params[:message][:id]).includes(:user)}
+      format.json{ @new_messages = Message.where('id > ? AND group_id = ?', params[:message][:id], params[:group_id])}
     end
   end
 
@@ -16,7 +16,7 @@ class MessagesController < ApplicationController
     @message = @group.messages.new(message_params)
     @message.save!
     respond_to do |format|
-      format.html{ redirect_to group_messages_path }
+      format.html{ redirect_to group_messages_path,notice: 'メッセージが送信されました'}
       format.json
     end
   end

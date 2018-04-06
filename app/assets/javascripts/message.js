@@ -2,7 +2,6 @@ $(function(){
 
   function autoupdate(){
   var message_id = $('.list').last().data('message-id');
-  console.log(message_id)
   if(window.location.href.match(/\/groups\/\d+\/messages/)){
     if(fail)return false;
     $.ajax({
@@ -52,11 +51,11 @@ $(function(){
       </li>
     </ul>`
     return html;
-    console.log(message)
   }
 
 fail = ""
   setInterval(autoupdate, 5000);
+
   $('#new_message').on('submit', function(e) {
     e.preventDefault();
     var formData = new FormData(this);
@@ -77,10 +76,9 @@ fail = ""
       $('#message_image').val('');
       $(".form_submit").prop('disabled', false);
       $(".main-middle-content").animate({scrollTop:$(".main-middle-content")[0].scrollHeight}, "swing");
-      alert('送信が完了しました')
     })
     .fail(function(){
-      alert('失敗しました');
+      alert('メッセージの送信が失敗しました');
     })
     return false;
   });
